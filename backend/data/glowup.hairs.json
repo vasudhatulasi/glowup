@@ -1,0 +1,131 @@
+[
+  {
+    "hairType": "Straight",
+    "ingredientsToUse": [
+      "Argan oil",
+      "Coconut oil",
+      "Aloe vera extract",
+      "Biotin shampoo",
+      "Keratin conditioner"
+    ],
+    "routine": {
+      "Step 1: Oil": "Apply warm coconut or argan oil once or twice a week and massage your scalp gently.",
+      "Step 2: Shampoo": "Use a sulfate-free, biotin-enriched shampoo to cleanse your scalp and hair.",
+      "Step 3: Conditioner": "Apply keratin-based conditioner to mid-length and ends. Rinse with cool water.",
+      "Step 4: Mask": "Use a nourishing hair mask with aloe vera or shea butter once a week for smoothness."
+    },
+    "foodHabits": {
+      "eat": [
+        "Protein-rich foods (eggs, fish, paneer)",
+        "Nuts and seeds (almonds, flaxseeds)",
+        "Leafy greens (spinach, kale)",
+        "Vitamin E-rich foods"
+      ],
+      "avoid": [
+        "Sugary snacks",
+        "Deep-fried foods",
+        "Excess caffeine",
+        "Soft drinks"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Amla juice",
+        "Banana",
+        "Papaya",
+        "Coconut water"
+      ],
+      "homeRemedies": [
+        "Mix aloe vera gel with coconut oil and apply as a natural conditioner.",
+        "Rinse hair with diluted apple cider vinegar once a week to reduce product buildup.",
+        "Massage scalp with castor oil and leave overnight for thicker hair."
+      ]
+    },
+    "lifestyleTips": "Avoid excessive heat styling, stay hydrated, protect your hair from UV exposure, and get regular trims to prevent split ends.",
+    "concerns": "Frizz, dullness, mild hair fall due to pollution and styling damage."
+  },
+  {
+    "hairType": "Wavy",
+    "ingredientsToUse": [
+      "Coconut milk",
+      "Jojoba oil",
+      "Shea butter",
+      "Argan shampoo",
+      "Moisturizing conditioner"
+    ],
+    "routine": {
+      "Step 1: Oil": "Use a blend of jojoba and coconut oil for scalp massage twice a week.",
+      "Step 2: Shampoo": "Wash with a hydrating, sulfate-free shampoo to retain natural oils.",
+      "Step 3: Conditioner": "Apply moisture-rich conditioner focusing on the ends.",
+      "Step 4: Mask": "Apply a shea butter or yogurt mask every 10 days for defined waves."
+    },
+    "foodHabits": {
+      "eat": [
+        "Avocados",
+        "Berries",
+        "Green leafy vegetables",
+        "Zinc-rich foods like lentils"
+      ],
+      "avoid": [
+        "Processed foods",
+        "Refined sugar",
+        "Alcohol"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Cucumber juice",
+        "Strawberries",
+        "Kiwi"
+      ],
+      "homeRemedies": [
+        "Apply mashed banana and honey as a moisturizing hair mask.",
+        "Rinse hair with hibiscus flower-infused water to enhance shine."
+      ]
+    },
+    "lifestyleTips": "Use satin pillowcases, avoid brushing dry hair, and let hair air-dry naturally to maintain waves.",
+    "concerns": "Frizz, dryness, undefined waves."
+  },
+  {
+    "hairType": "Curly",
+    "ingredientsToUse": [
+      "Shea butter",
+      "Coconut oil",
+      "Castor oil",
+      "Curl-defining cream",
+      "Argan conditioner"
+    ],
+    "routine": {
+      "Step 1: Oil": "Warm coconut or castor oil massage once a week before washing.",
+      "Step 2: Shampoo": "Use a sulfate-free shampoo focused on the scalp only.",
+      "Step 3: Conditioner": "Deep-condition after every wash to lock in moisture.",
+      "Step 4: Mask": "Apply shea butter or avocado hair mask weekly to enhance curl definition."
+    },
+    "foodHabits": {
+      "eat": [
+        "Omega-3 rich foods (salmon, walnuts)",
+        "Eggs",
+        "Citrus fruits",
+        "Spinach"
+      ],
+      "avoid": [
+        "Processed sugar",
+        "Soft drinks",
+        "Oily junk food"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Orange juice",
+        "Pomegranate",
+        "Papaya"
+      ],
+      "homeRemedies": [
+        "Use a mix of aloe vera and olive oil to tame frizz.",
+        "Rinse with rice water once a week to strengthen curls."
+      ]
+    },
+    "lifestyleTips": "Avoid brushing dry curls, use leave-in conditioners, sleep on a silk pillowcase, and maintain moisture with a spray bottle.",
+    "concerns": "Frizz, breakage, moisture loss."
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "goal": "Lose Weight",
+    "description": "Focus on fat burning with balanced cardio and calorie deficit nutrition.",
+    "recommendedWorkouts": [
+      "Running or brisk walking (30-45 mins)",
+      "HIIT (20 mins)",
+      "Cycling or swimming",
+      "Core strengthening exercises"
+    ],
+    "dietPlan": {
+      "morning": "Green tea with oats or boiled eggs",
+      "lunch": "Grilled chicken or paneer with salad and brown rice",
+      "evening": "Nuts or protein smoothie",
+      "dinner": "Vegetable soup or quinoa salad"
+    },
+    "foodHabits": {
+      "eat": ["High-fiber vegetables", "Lean proteins", "Healthy fats (avocado, nuts)"],
+      "avoid": ["Refined sugar", "Fried food", "Processed snacks"]
+    },
+    "lifestyleTips": [
+      "Stay hydrated throughout the day",
+      "Sleep at least 7 hours",
+      "Avoid late-night snacking",
+      "Do light stretching in the morning"
+    ],
+    "homeRemedies": [
+      "Drink warm lemon water in the morning",
+      "Green tea twice daily",
+      "Cinnamon and honey water for metabolism"
+    ],
+    "motivation": "Progress, not perfection — stay consistent and celebrate small wins!"
+  },
+  {
+    "goal": "Gain Muscle",
+    "description": "Build lean muscle with strength training and high-protein nutrition.",
+    "recommendedWorkouts": [
+      "Weight lifting (4-5 days/week)",
+      "Push-pull split routines",
+      "Resistance band workouts",
+      "Protein recovery stretches"
+    ],
+    "dietPlan": {
+      "morning": "Egg omelet or protein shake with banana",
+      "lunch": "Chicken, paneer or tofu with brown rice",
+      "evening": "Peanut butter sandwich or nuts",
+      "dinner": "Grilled fish or lentil soup with vegetables"
+    },
+    "foodHabits": {
+      "eat": ["High-protein meals", "Complex carbs like oats and sweet potatoes", "Healthy fats like nuts and olive oil"],
+      "avoid": ["Excess sugar drinks", "Junk food", "Skipping meals"]
+    },
+    "lifestyleTips": [
+      "Maintain a consistent workout schedule",
+      "Sleep 8 hours for muscle recovery",
+      "Track your calories and protein intake"
+    ],
+    "homeRemedies": [
+      "Drink milk with soaked almonds before bed",
+      "Add ghee or olive oil to meals for healthy fats"
+    ],
+    "motivation": "Train hard, eat smart — your body will follow your discipline."
+  }
+]

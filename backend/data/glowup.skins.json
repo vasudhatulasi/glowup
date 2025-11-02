@@ -1,0 +1,257 @@
+[
+  {
+    "skinType": "Acne-Prone",
+    "ingredientsToUse": [
+      "Salicylic Acid",
+      "Niacinamide",
+      "Tea Tree Oil",
+      "Zinc PCA",
+      "Green Tea Extract"
+    ],
+    "routine": {
+      "cleanser": "Gel-based cleanser with 2% Salicylic Acid",
+      "toner": "Alcohol-free toner with Witch Hazel or Green Tea",
+      "serum": "Niacinamide 10% + Zinc 1%",
+      "moisturizer": "Oil-free, non-comedogenic lightweight moisturizer",
+      "sunscreen": "Matte finish SPF 50 broad-spectrum sunscreen"
+    },
+    "foodHabits": {
+      "eat": [
+        "Leafy greens",
+        "Nuts rich in zinc",
+        "Fatty fish like salmon",
+        "Green tea",
+        "Whole grains"
+      ],
+      "avoid": [
+        "Dairy products",
+        "Sugary drinks",
+        "Fried foods",
+        "Processed snacks",
+        "Excess red meat"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Carrot juice",
+        "Lemon water",
+        "Papaya smoothie",
+        "Aloe vera juice",
+        "Green apple juice"
+      ],
+      "homeRemedies": [
+        "Aloe vera gel mask (15 min daily)",
+        "Honey + Cinnamon spot mask",
+        "Green tea toner (DIY)",
+        "Turmeric + Yogurt mask weekly",
+        "Ice cube with diluted tea tree oil"
+      ]
+    },
+    "lifestyleTips": "Avoid touching your face frequently, clean pillow covers regularly, and manage stress through meditation.",
+    "concerns": "Frequent breakouts, clogged pores, oily T-zone"
+  },
+  {
+    "skinType": "Dry",
+    "ingredientsToUse": [
+      "Hyaluronic Acid",
+      "Ceramides",
+      "Squalane",
+      "Glycerin",
+      "Vitamin E"
+    ],
+    "routine": {
+      "cleanser": "Cream-based cleanser with Ceramides",
+      "toner": "Hydrating toner with Rose Water",
+      "serum": "Hyaluronic Acid serum",
+      "moisturizer": "Rich moisturizer with Shea Butter and Squalane",
+      "sunscreen": "Moisturizing SPF 30 sunscreen"
+    },
+    "foodHabits": {
+      "eat": [
+        "Avocados",
+        "Coconut water",
+        "Olive oil",
+        "Salmon",
+        "Cucumbers"
+      ],
+      "avoid": [
+        "Alcohol",
+        "Caffeine",
+        "Salty snacks",
+        "Refined carbs",
+        "Spicy foods"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Coconut water",
+        "Orange juice",
+        "Watermelon juice",
+        "Avocado smoothie",
+        "Cucumber juice"
+      ],
+      "homeRemedies": [
+        "Milk + Honey face pack",
+        "Banana + Olive oil mask",
+        "Aloe vera gel overnight",
+        "Oatmeal + Yogurt scrub",
+        "Rose water mist"
+      ]
+    },
+    "lifestyleTips": "Use a humidifier, drink plenty of water, and avoid hot showers.",
+    "concerns": "Flakiness, tightness, dull appearance"
+  },
+  {
+    "skinType": "Oily",
+    "ingredientsToUse": [
+      "Niacinamide",
+      "Green Tea Extract",
+      "Aloe Vera",
+      "Zinc PCA",
+      "Clay"
+    ],
+    "routine": {
+      "cleanser": "Foaming cleanser with Niacinamide or Tea Tree Oil",
+      "toner": "Mattifying toner with Green Tea",
+      "serum": "Oil-control serum with Zinc",
+      "moisturizer": "Light gel-based moisturizer",
+      "sunscreen": "Oil-free SPF 50 sunscreen"
+    },
+    "foodHabits": {
+      "eat": [
+        "Cucumbers",
+        "Tomatoes",
+        "Citrus fruits",
+        "Whole grains",
+        "Yogurt"
+      ],
+      "avoid": [
+        "Greasy food",
+        "Sugary snacks",
+        "Processed meats",
+        "Soft drinks",
+        "Refined flour items"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Lemon water",
+        "Cucumber juice",
+        "Tomato juice",
+        "Watermelon",
+        "Amla juice"
+      ],
+      "homeRemedies": [
+        "Multani mitti (Fuller’s Earth) face pack twice a week",
+        "Aloe vera gel daily at night",
+        "Cucumber + Lemon toner",
+        "Steam once a week to unclog pores",
+        "Clay mask weekly"
+      ]
+    },
+    "lifestyleTips": "Blot excess oil with tissue, avoid heavy makeup, clean face twice daily.",
+    "concerns": "Greasy skin, blackheads, large pores"
+  },
+  {
+    "skinType": "Sensitive",
+    "ingredientsToUse": [
+      "Aloe Vera",
+      "Centella Asiatica",
+      "Chamomile",
+      "Oat Extract",
+      "Panthenol"
+    ],
+    "routine": {
+      "cleanser": "Mild, fragrance-free cleanser",
+      "toner": "Alcohol-free calming toner",
+      "serum": "Soothing serum with Centella or Panthenol",
+      "moisturizer": "Hypoallergenic moisturizer with Oats or Ceramides",
+      "sunscreen": "Mineral sunscreen with Zinc Oxide"
+    },
+    "foodHabits": {
+      "eat": [
+        "Oats",
+        "Blueberries",
+        "Carrots",
+        "Almonds",
+        "Green leafy vegetables"
+      ],
+      "avoid": [
+        "Spicy foods",
+        "Caffeine",
+        "Citrus in excess",
+        "Processed foods",
+        "Alcohol"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Coconut water",
+        "Apple juice",
+        "Pear juice",
+        "Cucumber juice",
+        "Papaya smoothie"
+      ],
+      "homeRemedies": [
+        "Cucumber + Aloe vera cooling mask",
+        "Oatmeal + Honey soothing pack",
+        "Cold milk compress",
+        "Chamomile tea rinse",
+        "Avoid harsh scrubs or exfoliants"
+      ]
+    },
+    "lifestyleTips": "Patch-test new products, use soft towels, and keep skincare simple.",
+    "concerns": "Redness, irritation, burning, sensitivity to products"
+  },
+  {
+    "skinType": "Combination",
+    "ingredientsToUse": [
+      "Niacinamide",
+      "Green Tea",
+      "Hyaluronic Acid",
+      "Vitamin B5",
+      "Kaolin Clay"
+    ],
+    "routine": {
+      "cleanser": "Gel cleanser for T-zone, cream cleanser for dry areas",
+      "toner": "Balancing toner with Green Tea",
+      "serum": "Niacinamide serum for oil balance",
+      "moisturizer": "Light moisturizer with Hyaluronic Acid",
+      "sunscreen": "Oil-free broad-spectrum SPF 40"
+    },
+    "foodHabits": {
+      "eat": [
+        "Mixed fruits",
+        "Leafy vegetables",
+        "Whole grains",
+        "Nuts",
+        "Coconut water"
+      ],
+      "avoid": [
+        "Sugary snacks",
+        "Dairy",
+        "Fried foods",
+        "Caffeine",
+        "Refined carbs"
+      ]
+    },
+    "fruitsAndRemedies": {
+      "fruitsAndJuices": [
+        "Mixed fruit smoothie",
+        "Aloe vera juice",
+        "Coconut water",
+        "Watermelon juice",
+        "Lemon water"
+      ],
+      "homeRemedies": [
+        "Apply aloe vera gel on T-zone and honey mask on cheeks",
+        "Use clay mask only on oily zones",
+        "Rose water mist for hydration",
+        "Weekly exfoliation with oatmeal",
+        "Papaya enzyme mask bi-weekly"
+      ]
+    },
+    "lifestyleTips": "Use multi-masking, balance hydration, and avoid harsh products on dry areas.",
+    "concerns": "Oily T-zone, dry cheeks, uneven texture"
+  }
+]
