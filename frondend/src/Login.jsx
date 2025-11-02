@@ -1,25 +1,35 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import api from "./api"; // ✅ centralized axios
 
-
-export default function AuthForm() {
+export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:5000/login", { username, password })
-      .then((res) => {
+
+    try {
+      const res = await api.post("/login", { username, password });
+
+      console.log("Login response:", res.data); // ✅ Debug log
+
+      if (res.data.token) {
         localStorage.setItem("token", res.data.token);
-        alert("Login Successful");
+        alert("Login Successful 🎉");
         navigate("/home");
-      })
-      .catch(() => {
-        alert("Invalid username or password");
-      });
+      } else {
+        alert(res.data.message || "Invalid credentials");
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      if (error.response) {
+        alert(error.response.data.message || "Invalid username or password");
+      } else {
+        alert("Server not reachable. Try again later.");
+      }
+    }
   };
 
   const styles = {
@@ -99,6 +109,7 @@ export default function AuthForm() {
         <div style={styles.card}>
           <h2 style={styles.title}>Welcome Back ✨</h2>
           <p style={styles.subtitle}>Login to continue your GlowUp journey</p>
+
           <form onSubmit={handleLogin}>
             <input
               type="text"
@@ -118,6 +129,7 @@ export default function AuthForm() {
             />
             <button style={styles.button}>Login</button>
           </form>
+
           <p style={styles.switchText}>
             Don't have an account?{" "}
             <span style={styles.switchSpan} onClick={() => navigate("/signup")}>

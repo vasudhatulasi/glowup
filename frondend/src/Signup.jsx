@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import api from "./api"; // ✅ import your axios instance
 
 export default function Signup() {
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:5000/signup", { username, password })
-      .then((res) => {
-        alert("Signup Successful");
-        navigate("/"); // redirect to login page
-      })
-      .catch(() => {
-        alert("Signup Failed. Try again.");
-      });
+    try {
+      // ✅ No need to include /api in the path, since baseURL already has it
+      await api.post("/signup", { username, password });
+      alert("Signup Successful 🎉");
+      navigate("/"); // redirect to login
+    } catch (error) {
+      console.error("Signup failed:", error);
+      alert("Signup Failed. Try again.");
+    }
   };
 
   const styles = {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import api from "./api"; // 👈 adjust path if needed
 
 export default function BodyCare() {
   const [goal, setGoal] = useState("");
@@ -15,9 +15,7 @@ export default function BodyCare() {
     if (!goal) return alert("Please select your fitness goal");
 
     try {
-      const response = await axios.get(
-        `http://localhost:5000/api/body/${encodeURIComponent(goal)}`
-      );
+      const response = await api.get(`/body/${encodeURIComponent(goal)}`);
       navigate("/body-result", { state: { data: response.data } });
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -28,9 +26,7 @@ export default function BodyCare() {
   return (
     <div className="questionnaire" style={{ padding: "30px", textAlign: "center" }}>
       <h1 style={{ color: "#ff6ea1" }}>💪 Weight & Fitness Questionnaire</h1>
-
       <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "auto" }}>
-        {/* Select Goal */}
         <label>What is your current goal?</label>
         <select
           value={goal}
@@ -49,7 +45,6 @@ export default function BodyCare() {
           <option value="Improve Stamina">Improve Stamina</option>
         </select>
 
-        {/* Current Weight */}
         <label>Current Weight (kg):</label>
         <input
           type="number"
@@ -59,7 +54,6 @@ export default function BodyCare() {
           style={{ width: "100%", padding: "10px", marginBottom: "20px", borderRadius: "8px" }}
         />
 
-        {/* Target Weight */}
         <label>Target Weight (kg):</label>
         <input
           type="number"
@@ -69,7 +63,6 @@ export default function BodyCare() {
           style={{ width: "100%", padding: "10px", marginBottom: "20px", borderRadius: "8px" }}
         />
 
-        {/* Activity Routine */}
         <label>Describe your physical activity routine:</label>
         <textarea
           value={activity}
@@ -83,7 +76,6 @@ export default function BodyCare() {
           }}
         />
 
-        {/* Eating Habits */}
         <label>Describe your eating habits:</label>
         <textarea
           value={eating}
@@ -97,7 +89,6 @@ export default function BodyCare() {
           }}
         />
 
-        {/* Submit Button */}
         <button
           type="submit"
           style={{

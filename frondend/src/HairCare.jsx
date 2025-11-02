@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import api from "./api"; // ✅ use your api.js
 
 export default function HairCare() {
   const [hairType, setHairType] = useState("");
@@ -11,9 +11,10 @@ export default function HairCare() {
     if (!hairType) return alert("Please select your hair type");
 
     try {
-      const response = await axios.get(`http://localhost:5000/api/hair/${hairType}`);
+      // ✅ Call the backend API
+      const response = await api.get(`/hair/${encodeURIComponent(hairType)}`);
 
-      // Navigate to result page and pass data
+      // ✅ Navigate to results page with data
       navigate("/hair-result", { state: { data: response.data } });
     } catch (error) {
       console.error("Error fetching data:", error);

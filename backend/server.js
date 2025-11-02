@@ -37,7 +37,7 @@ const skinSchema = new mongoose.Schema({
 });
 const Skin = mongoose.model("skins", skinSchema);
 
-app.get("/api/skin/:type", async (req, res) => {
+app.get("/skin/:type", async (req, res) => {
   try {
     const type = req.params.type;
     const data = await Skin.findOne({ skinType: type });
@@ -62,7 +62,7 @@ const hairSchema = new mongoose.Schema({
 });
 const Hair = mongoose.model("hairs", hairSchema);
 
-app.get("/api/hair/:type", async (req, res) => {
+app.get("/hair/:type", async (req, res) => {
   try {
     const type = req.params.type;
     const data = await Hair.findOne({ hairType: type });
@@ -88,7 +88,7 @@ const bodySchema = new mongoose.Schema({
 });
 const Body = mongoose.model("bodies", bodySchema);
 
-app.get("/api/body/:goal", async (req, res) => {
+app.get("/body/:goal", async (req, res) => {
   try {
     const goal = req.params.goal;
     const data = await Body.findOne({ goal });
