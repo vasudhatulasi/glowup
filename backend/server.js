@@ -1,9 +1,9 @@
+// server.js
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const fs = require("fs"); // ✅ Added to read JSON files
-
+require("dotenv").config();
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -12,19 +12,16 @@ app.use(cors());
    🌸 DATABASE CONNECTION
 ================================================================ */
 mongoose
-  .connect("mongodb://127.0.0.1:27017/glowup", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("✅ MongoDB Connected via Compass"))
-  .catch((err) => console.log(err));
-
-/* ================================================================
-   📂 LOAD LOCAL JSON FILES (for fallback if DB empty)
-================================================================ */
-const skinData = JSON.parse(fs.readFileSync("./data/glowup.skins.json", "utf-8"));
-const hairData = JSON.parse(fs.readFileSync("./data/glowup.hairs.json", "utf-8"));
-const bodyData = JSON.parse(fs.readFileSync("./data/glowup.bodies.json", "utf-8"));
+  .connect(
+    process.env.MONGO_URI ||
+      "mongodb+srv://vasudhatulasi4_db_user:OD6LMySyBuKG5Gyz@cluster0.mdnftle.mongodb.net/glowup",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.log("❌ MongoDB Error:", err));
 
 /* ================================================================
    🧴 SKINCARE COLLECTION
@@ -43,12 +40,8 @@ const Skin = mongoose.model("skins", skinSchema);
 app.get("/api/skin/:type", async (req, res) => {
   try {
     const type = req.params.type;
-    let data = await Skin.findOne({ skinType: type });
-
-    // ✅ Use local JSON data if DB has no record
-    if (!data) data = skinData.find((s) => s.skinType.toLowerCase() === type.toLowerCase());
+    const data = await Skin.findOne({ skinType: type });
     if (!data) return res.status(404).json({ message: "No skincare data found" });
-
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -72,12 +65,8 @@ const Hair = mongoose.model("hairs", hairSchema);
 app.get("/api/hair/:type", async (req, res) => {
   try {
     const type = req.params.type;
-    let data = await Hair.findOne({ hairType: type });
-
-    // ✅ Fallback to JSON if MongoDB has no data
-    if (!data) data = hairData.find((h) => h.hairType.toLowerCase() === type.toLowerCase());
+    const data = await Hair.findOne({ hairType: type });
     if (!data) return res.status(404).json({ message: "No haircare data found" });
-
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -102,12 +91,8 @@ const Body = mongoose.model("bodies", bodySchema);
 app.get("/api/body/:goal", async (req, res) => {
   try {
     const goal = req.params.goal;
-    let data = await Body.findOne({ goal });
-
-    // ✅ Fallback to JSON if MongoDB empty
-    if (!data) data = bodyData.find((b) => b.goal.toLowerCase() === goal.toLowerCase());
+    const data = await Body.findOne({ goal });
     if (!data) return res.status(404).json({ message: "No bodycare data found" });
-
     res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -115,31 +100,30 @@ app.get("/api/body/:goal", async (req, res) => {
 });
 
 /* ================================================================
-   👤 USER LOGIN & SIGNUP (same code, no change)
+   👤 USER LOGIN & SIGNUP
 ================================================================ */
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
 });
-let usermodel = mongoose.model("user", userSchema);
+const User = mongoose.model("users", userSchema);
 
 app.post("/signup", async (req, res) => {
-  let { username, password } = req.body;
-  let existinguser = (await usermodel.findOne({ username })) || {};
-  if (existinguser.username == username) {
-    res.json({ message: "user already exists" });
-  } else {
-    let newuser = await usermodel.create({ username, password });
-    res.json({ message: "user registered successfully", user: newuser });
-  }
+  const { username, password } = req.body;
+  const existingUser = await User.findOne({ username });
+  if (existingUser) return res.json({ message: "User already exists" });
+
+  const newUser = await User.create({ username, password });
+  res.json({ message: "User registered successfully", user: newUser });
 });
 
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
-  const user = await usermodel.findOne({ username });
+  const user = await User.findOne({ username });
 
   if (!user) return res.status(404).json({ message: "User not found" });
-  if (user.password !== password) return res.status(401).json({ message: "Invalid password" });
+  if (user.password !== password)
+    return res.status(401).json({ message: "Invalid password" });
 
   const token = jwt.sign({ username }, "sectiona", { expiresIn: "1h" });
   res.json({ message: "Access granted", token });
@@ -162,14 +146,18 @@ function verifyToken(req, res, next) {
 }
 
 app.get("/profile", verifyToken, (req, res) => {
-  res.json({ message: "access granted", user: req.user });
+  res.json({ message: "Access granted", user: req.user });
 });
 
 /* ================================================================
-   🧠 TEST ROUTE & SERVER
+   🧠 TEST ROUTE
 ================================================================ */
 app.get("/", (req, res) => {
-  res.send("✨ GlowUp API running — Skin, Hair, and Body collections active!");
+  res.send("✨ GlowUp API running — connected to MongoDB!");
 });
 
-app.listen(5000, () => console.log("🚀 Server running on port 5000"));
+/* ================================================================
+   🚀 SERVER LISTEN
+================================================================ */
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
